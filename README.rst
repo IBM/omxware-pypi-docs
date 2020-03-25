@@ -1,6 +1,6 @@
-=======
-OMXware
-=======
+===================================
+IBM Functional Genomics Platform
+===================================
 
 |
 
@@ -12,13 +12,13 @@ OMXware
 
 **SDK Documentation:**
 
-`http://ibm.biz/omxware-sdk-docs <https://ibm.github.io/omxware-pypi-docs/>`_
+`https://ibm.biz/functional-genomics-sdk-docs <https://ibm.github.io/omxware-pypi-docs/>`_
 
 ---------------
 
 **Web Services**
 
-`http://ibm.biz/omxware-api <https://api.s2s-omxware.us-south.containers.appdomain.cloud/>`_
+`https://ibm.biz/functional-genomics-api <https://api.s2s-omxware.us-south.containers.appdomain.cloud/>`_
 
 ---------------
 
@@ -30,15 +30,21 @@ OMXware
 
 **Help / Forums**
 
-`http://ibm.biz/omxware-forum <https://forum.s2s-omxware.us-south.containers.appdomain.cloud>`_
+`https://ibm.biz/functional-genomics-forum <https://forum.s2s-omxware.us-south.containers.appdomain.cloud>`_
 
 ---------------
 
 Citation
 ***************
-* Please contact the `OMXWare Team via the Forums <http://ibm.biz/omxware-citation>`_ for updated citation information prior to publishing or presenting OMXWare content.
+* Please contact the `IBM Functional Genomics Platform Team via the Forums <http://ibm.biz/omxware-citation>`_ for updated citation information prior to publishing or presenting IBM Functional Genomics Platform content.
 
- e.g: ``"OMXWare: Microbial Life at Scale" IBM Research, manuscript in preparation``
+
+    `"OMXWare, A Cloud-Based Platform for Studying Microbial Life at Scale" <https://arxiv.org/abs/1911.02095>`_
+
+    *Edward E. Seabolt, Gowri Nayar, Harsha Krishnareddy, Akshay Agarwal, Kristen L. Beck, Ignacio Terrizzano, Eser Kandogan, Mary Roth, Vandana Mukherjee, James H. Kaufman*
+
+    `arXiv:1911.02095v2 <https://arxiv.org/abs/1911.02095>`_
+
 
 |
 
@@ -48,8 +54,8 @@ Use with Docker
 
 In an effort to make it easier for users and developers to get started with OMXWare, We have a 2 base docker images with ``python`` and OMXWare pre-installed. It also comes with a bunch of python libs like ``matplotlib``, ``numpy`` along with some others.
 
- **1)  Minimal:** ``docker pull c0mpiler/alpine-omxware-base:latest`` 
- 
+ **1)  Minimal:** ``docker pull c0mpiler/alpine-omxware-base:latest``
+
  https://hub.docker.com/r/c0mpiler/alpine-omxware-base
 
 ----------------------------------------------------------------------------------------------------------------------
