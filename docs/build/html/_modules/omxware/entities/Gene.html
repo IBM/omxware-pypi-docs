@@ -6,9 +6,10 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>omxware.entities.Gene &#8212; omxware 0.1.28 documentation</title>
+    <title>omxware.entities.Gene &#8212; omxware 0.1.32 documentation</title>
     <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
@@ -35,16 +36,16 @@
   <h1>Source code for omxware.entities.Gene</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
-<span class="kn">from</span> <span class="nn">omxware</span> <span class="k">import</span> <span class="n">omxware</span>
-<span class="kn">from</span> <span class="nn">omxware.config</span> <span class="k">import</span> <span class="n">Connection</span>
+<span class="kn">from</span> <span class="nn">omxware</span> <span class="kn">import</span> <span class="n">omxware</span>
+<span class="kn">from</span> <span class="nn">omxware.config</span> <span class="kn">import</span> <span class="n">Connection</span>
 
-<span class="kn">from</span> <span class="nn">omxware.entities.Entity</span> <span class="k">import</span> <span class="n">Entity</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Genome</span> <span class="k">import</span> <span class="n">Genome</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Genus</span> <span class="k">import</span> <span class="n">Genus</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.GoTerm</span> <span class="k">import</span> <span class="n">Go</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.IprCode</span> <span class="k">import</span> <span class="n">Ipr</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Entity</span> <span class="kn">import</span> <span class="n">Entity</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Genome</span> <span class="kn">import</span> <span class="n">Genome</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Genus</span> <span class="kn">import</span> <span class="n">Genus</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.GoTerm</span> <span class="kn">import</span> <span class="n">Go</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.IprCode</span> <span class="kn">import</span> <span class="n">Ipr</span>
 
-<span class="kn">from</span> <span class="nn">omxware.utils.ResultUtils</span> <span class="k">import</span> <span class="n">list2str</span>
+<span class="kn">from</span> <span class="nn">omxware.utils.ResultUtils</span> <span class="kn">import</span> <span class="n">list2str</span>
 
 
 <div class="viewcode-block" id="Gene"><a class="viewcode-back" href="../../../omxware.entities.html#omxware.entities.Gene.Gene">[docs]</a><span class="k">class</span> <span class="nc">Gene</span><span class="p">(</span><span class="n">Entity</span><span class="p">):</span>
@@ -57,7 +58,7 @@
     <span class="n">_goterms</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># [GoTerm]</span>
     <span class="n">_iprcodes</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># [IprCode]</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connecthdr</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connecthdr</span><span class="p">:</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Construction</span>
 
@@ -412,7 +413,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">OMXWare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">IBM Functional Genomics Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modules.html">omxware</a></li>
@@ -454,7 +455,7 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, OMXWare Dev.
+      &copy;2020, IBM.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>

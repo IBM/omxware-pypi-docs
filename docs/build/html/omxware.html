@@ -6,9 +6,10 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>omxware package &#8212; omxware 0.1.29 documentation</title>
+    <title>omxware package &#8212; omxware 0.1.32 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -289,7 +290,7 @@
 
 <dl class="method">
 <dt id="omxware.omxware.omxware.domains">
-<code class="descname">domains</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>genus_names=None</em>, <em>protein_ids=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.domains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.domains" title="Permalink to this definition">¶</a></dt>
+<code class="descname">domains</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>genus_names=None</em>, <em>protein_ids=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>classification=None</em>, <em>collection=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.domains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get OMXWare Domains.</p>
 <p>Parameters:</p>
 <blockquote>
@@ -361,8 +362,8 @@
 
 <dl class="method">
 <dt id="omxware.omxware.omxware.genes">
-<code class="descname">genes</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>gene_name=None</em>, <em>genome_ids=None</em>, <em>genus_names=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.genes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.genes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get OMXWare Genes.</p>
+<code class="descname">genes</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>gene_name=None</em>, <em>genome_ids=None</em>, <em>genus_names=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>classification=None</em>, <em>collection=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.genes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.genes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Genes.</p>
 <dl class="docutils">
 <dt>Parameters:</dt>
 <dd><table class="first last docutils field-list" frame="void" rules="none">
@@ -408,6 +409,18 @@
 <tr class="field-even field"><th class="field-name" colspan="2">type sequence_length:</th></tr>
 <tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
 </tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param classification:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Must only be one of {‘bacteria’, ‘virus’, ‘all’}</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type classification:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param collection:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">List of Collection names. e.g: ‘covid19’ (collections is a pre-defined set of data tagged by the platform team)</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type collection:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">[str]</td>
+</tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">param page_number:</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body">(int): Page Number</td>
 </tr>
@@ -437,8 +450,8 @@
 
 <dl class="method">
 <dt id="omxware.omxware.omxware.genomes">
-<code class="descname">genomes</code><span class="sig-paren">(</span><em>ids=None</em>, <em>genus_names=None</em>, <em>genome_type=None</em>, <em>genome_taxid=None</em>, <em>created_before=None</em>, <em>created_after=None</em>, <em>modified_before=None</em>, <em>modified_after=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.genomes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.genomes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get OMXWare Genomes by List of Genome ID(s) and/or Genus name(s) .</p>
+<code class="descname">genomes</code><span class="sig-paren">(</span><em>ids=None</em>, <em>genus_names=None</em>, <em>genome_type=None</em>, <em>genome_taxid=None</em>, <em>classification=None</em>, <em>collection=None</em>, <em>created_before=None</em>, <em>created_after=None</em>, <em>modified_before=None</em>, <em>modified_after=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.genomes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.genomes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Genomes by List of Genome ID(s) and/or Genus name(s) .</p>
 <dl class="docutils">
 <dt>Parameters:</dt>
 <dd><table class="first last docutils field-list" frame="void" rules="none">
@@ -455,16 +468,28 @@
 <tr class="field-even field"><th class="field-name" colspan="2">type genus_names:</th></tr>
 <tr class="field-even field"><td>&#160;</td><td class="field-body">[str]</td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">param genus_names:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param genome_type:</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body">List of Genome Types. Must be one of { ‘REFSEQ’, ‘SRA’, ‘GENBANK’ }</td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">type genus_names:</th></tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type genome_type:</th></tr>
 <tr class="field-even field"><td>&#160;</td><td class="field-body">[str]</td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">param genus_names:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param genome_taxid:</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body">List of Genome Tax ids</td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">type genus_names:</th></tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type genome_taxid:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">[str]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param classification:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Must only be one of {‘bacteria’, ‘virus’, ‘all’}</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type classification:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param collection:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">List of Collection names. e.g: ‘covid19’ (collections is a pre-defined set of data tagged by the platform team)</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type collection:</th></tr>
 <tr class="field-even field"><td>&#160;</td><td class="field-body">[str]</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">param created_before:</th></tr>
@@ -521,7 +546,7 @@
 <dl class="method">
 <dt id="omxware.omxware.omxware.genus">
 <code class="descname">genus</code><span class="sig-paren">(</span><em>genus_names=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.genus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.genus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get OMXWare Genera by names .</p>
+<dd><p>Get Genera by names .</p>
 <dl class="docutils">
 <dt>Parameters:</dt>
 <dd><table class="first last docutils field-list" frame="void" rules="none">
@@ -657,8 +682,8 @@
 
 <dl class="method">
 <dt id="omxware.omxware.omxware.proteins">
-<code class="descname">proteins</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>protein_name=None</em>, <em>genome_ids=None</em>, <em>genus_names=None</em>, <em>domain_ids=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.proteins"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.proteins" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get OMXWare Proteins.</p>
+<code class="descname">proteins</code><span class="sig-paren">(</span><em>ids=None</em>, <em>sequence=None</em>, <em>protein_name=None</em>, <em>genome_ids=None</em>, <em>genus_names=None</em>, <em>domain_ids=None</em>, <em>go_terms=None</em>, <em>ipr_ids=None</em>, <em>sequence_length=None</em>, <em>classification=None</em>, <em>collection=None</em>, <em>page_size=25</em>, <em>page_number=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omxware/omxware.html#omxware.proteins"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omxware.omxware.omxware.proteins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Proteins.</p>
 <p>Parameters:</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
@@ -1022,7 +1047,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">OMXWare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">IBM Functional Genomics Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">omxware</a><ul class="current">
@@ -1077,7 +1102,7 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, IBM.
+      &copy;2020, IBM.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>

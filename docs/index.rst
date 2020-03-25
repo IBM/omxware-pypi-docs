@@ -1,4 +1,4 @@
-OMXWare SDK docs!
+IBM Functional Genomics Platform
 ======================================
 
 .. toctree::

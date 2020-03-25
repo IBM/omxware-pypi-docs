@@ -6,9 +6,10 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>omxware.OmxResponse &#8212; omxware 0.1.28 documentation</title>
+    <title>omxware.OmxResponse &#8212; omxware 0.1.32 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
@@ -38,16 +39,16 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">requests</span> <span class="k">import</span> <span class="n">Response</span>
+<span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">Response</span>
 
-<span class="kn">from</span> <span class="nn">omxware.entities.Domain</span> <span class="k">import</span> <span class="n">Domain</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Gene</span> <span class="k">import</span> <span class="n">Gene</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Genome</span> <span class="k">import</span> <span class="n">Genome</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Genus</span> <span class="k">import</span> <span class="n">Genus</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.GoTerm</span> <span class="k">import</span> <span class="n">Go</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.IprCode</span> <span class="k">import</span> <span class="n">Ipr</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.Protein</span> <span class="k">import</span> <span class="n">Protein</span>
-<span class="kn">from</span> <span class="nn">omxware.entities.User</span> <span class="k">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Gene</span> <span class="kn">import</span> <span class="n">Gene</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Genome</span> <span class="kn">import</span> <span class="n">Genome</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Genus</span> <span class="kn">import</span> <span class="n">Genus</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.GoTerm</span> <span class="kn">import</span> <span class="n">Go</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.IprCode</span> <span class="kn">import</span> <span class="n">Ipr</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.Protein</span> <span class="kn">import</span> <span class="n">Protein</span>
+<span class="kn">from</span> <span class="nn">omxware.entities.User</span> <span class="kn">import</span> <span class="n">User</span>
 
 
 <div class="viewcode-block" id="OmxResponse"><a class="viewcode-back" href="../../omxware.html#omxware.OmxResponse.OmxResponse">[docs]</a><span class="k">class</span> <span class="nc">OmxResponse</span><span class="p">:</span>
@@ -65,7 +66,7 @@
 
     <span class="n">__results_type</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connecthdr</span><span class="p">,</span> <span class="n">omx_response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connecthdr</span><span class="p">,</span> <span class="n">omx_response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__connect_hdr</span> <span class="o">=</span> <span class="n">connecthdr</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">omx_response</span><span class="p">,</span> <span class="n">Response</span><span class="p">):</span>
@@ -184,7 +185,14 @@
         <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;fasta&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__2fasta</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__results</span><span class="p">)</span></div>
 
+
 <div class="viewcode-block" id="OmxResponse.facets"><a class="viewcode-back" href="../../omxware.html#omxware.OmxResponse.OmxResponse.facets">[docs]</a>    <span class="k">def</span> <span class="nf">facets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Get the pre-defined groups/facets for the results requested.</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                    :return:    JSON array with the group names and counts.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__facets</span></div>
 
     <span class="k">def</span> <span class="nf">__process_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
@@ -288,7 +296,7 @@
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;&#39;Fasta&#39; output format only for Genes / Proteins&quot;</span><span class="p">)</span>
 
 
-    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">res_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__results_json</span><span class="p">)</span>
         <span class="n">fac_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__facets</span><span class="p">)</span>
 
@@ -311,7 +319,19 @@
 
         <span class="k">return</span> <span class="n">string</span>
 
+
 <div class="viewcode-block" id="OmxResponse.show_facets"><a class="viewcode-back" href="../../omxware.html#omxware.OmxResponse.OmxResponse.show_facets">[docs]</a>    <span class="k">def</span> <span class="nf">show_facets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">topN</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Display the groups / facets from the results. Only to be used in an environments that can display a pandas visualization.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">                name (str): group name. (e.g: when searching for genes/proteins group name could be &#39;genus_name&#39;)</span>
+
+<span class="sd">                topN (int): top &#39;N&#39; groups</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">                Pandas pie chart (visualization)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">facets</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">facets</span><span class="p">():</span>
 
             <span class="n">rand</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">topN</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -365,7 +385,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../readme.html">OMXWare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">IBM Functional Genomics Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modules.html">omxware</a></li>
@@ -407,7 +427,7 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, OMXWare Dev.
+      &copy;2020, IBM.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
